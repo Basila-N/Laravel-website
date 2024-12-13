@@ -1,0 +1,251 @@
+
+/* Navbar */
+
+.navbar {
+    padding: 3px 8px; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand img {
+    height: 50px; 
+}
+
+.navbar-toggler {
+    border-color: #ffb600;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffb600' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.btn-close {
+    filter: invert(400%); 
+}
+
+.btn-close:hover {
+    filter: invert(50%); 
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 19px; 
+    font-weight: bold;
+    margin: 0 10px;  
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffb600;
+    border-bottom: 2px solid #ffb600;
+}
+
+.offcanvas {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ss-btn {
+    background: #FFCE1C;
+    color: #121218;
+    padding: 10px 20px; 
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.ss-btn:hover {
+    background: #FF6F1C;
+    color: white;
+}
+
+/* Footer Styles */
+/* General Footer Styles */
+.footer {
+    background-color: #101820;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer .cont3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Spread columns evenly */
+    gap: 20px; /* Add spacing between columns */
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Ensure flexibility and minimum width */
+    margin: 10px 0;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    color: #F2AA4C;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-column p, 
+.footer-column ul {
+    font-size: 0.9rem;
+    color: #dddddd;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #F2AA4C;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center-align icons */
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d66000;
+}
+
+/* Instagram Section */
+
+
+
+.thumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between; 
+}
+
+.thumb a.thumb-menu {
+    /* width: calc(33.33% - 8px);  */
+    /* height: 90px;  */
+    background-size: cover;
+    background-position: center;
+    display: block;
+  width: 48%; 
+  height: 70px; 
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.85rem;
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px; /* Increase spacing for better readability */
+    }
+
+    .footer-column {
+        flex: 1 1 auto; /* Adjust column flexibility */
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem; /* Slightly reduce font size */
+    }
+     .footer-column {
+    margin-bottom: 30px;
+   }
+
+    .instagram .thumb-menu {
+        width: 48%; 
+        text-align: center;
+    }
+  .thumb{
+    align-items: center;
+    margin-left: 50px;
+
+  }
+}
+
+@media (max-width: 480px) {
+    .footer-column h3 {
+        font-size: 1rem; /* Reduce heading size */
+    }
+
+    .footer-column p, 
+    .footer-column ul {
+        font-size: 0.8rem; /* Reduce text size */
+    }
+
+    .social-icons a {
+        font-size: 1rem; /* Reduce icon size */
+    }
+
+    .footer-bottom {
+        padding: 8px 0; /* Reduce bottom padding */
+        font-size: 0.7rem;
+    }
+
+    .thumb {
+    width: 48%; /* Two images per row */
+    margin-bottom: 10px; /* Space between rows */
+    aspect-ratio: 1; /* Maintain square aspect ratio */
+  }
+
+  .thumb .thumb-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+}
